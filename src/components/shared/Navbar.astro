@@ -1,3 +1,9 @@
+---
+import Search from "@/components/icons/Search.icon.astro";
+import User from "../icons/User.icon.astro";
+import NavBarLink from "../navBarLink/NavBarLink.astro";
+---
+
 <!--
 Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide any of your page content!
 -->
@@ -31,22 +37,12 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
 <!-- Navbar start -->
 <nav
     id="navbar"
-    class="fixed top-0 z-40 flex w-full flex-row justify-end bg-black px-4 sm:justify-between"
+    class="fixed top-0 z-40 flex w-full flex-row justify-start bg-black px-4 sm:justify-between"
 >
-    <ul
-        class="breadcrumb hidden flex-row items-center py-4 text-lg text-white sm:flex"
-    >
-        <li class="inline">
-            <a href="#">Main</a>
-        </li>
-        <li class="inline">
-            <span>Homepage</span>
-        </li>
-    </ul>
     <button
         id="btnSidebarToggler"
         type="button"
-        class="py-4 text-2xl text-white hover:text-gray-200"
+        class="py-4 text-2xl text-yellow-500 hover:text-gray-200"
     >
         <svg
             id="navClosed"
@@ -77,6 +73,14 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
                 d="M6 18L18 6M6 6l12 12"></path>
         </svg>
     </button>
+
+    <div class=" flex flex-row justify-center items-center py-4 text-lg text-white sm:flex">
+        <h1 class=" text-white font-bold text-2xl">Music <span class="bg-yellow-500 text-black">hub</span></h1>
+    </div>
+    <div class="flex flex-row items-center text-2xl" >
+        <Search  width='1.5em' className="text-white cursor-pointer"/>
+        <User width='1.5em' className="text-white cursor-pointer" />
+    </div>
 </nav>
 <!-- Navbar end -->
 
@@ -88,7 +92,7 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
             class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-black pt-6 pb-8 sm:max-w-xs lg:w-80"
         >
             <!-- one category / navigation group -->
-            <div class="px-4 pb-6">
+            <!-- <div class="px-4 pb-6">
                 <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
                     Main
                 </h3>
@@ -110,8 +114,22 @@ Change class "fixed" to "sticky" in "navbar" (l. 33) so the navbar doesn't hide 
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <!-- navigation group end-->
+                    <ul class="mb-8 text-sm font-medium">
+                    <li>
+                        <NavBarLink class='active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600' href='/'>Home</NavBarLink>
+                        <NavBarLink class='active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600' href='#'>Musica</NavBarLink>
+                    </li>
+                    <li>
+                        <a
+                            class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="#link1"
+                        >
+                            <span class="select-none">link1</span>
+                        </a>
+                    </li>
+                </ul>
 
             <!-- example copies start -->
             <div class="px-4 pb-6">
