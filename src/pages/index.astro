@@ -1,0 +1,79 @@
+---
+import Modal from "@/components/modal/Modal.astro";
+import Layout from "../layouts/Layout.astro";
+const planetMusic = "../../../public/assets/imgs/planetMusic.png";
+const ia = "../../../public/assets/imgs/ia.gif";
+const carritoCompra = "../../../public/assets/imgs/carrito-compra.gif";
+const co = "../../../public/assets/imgs/co.gif";
+const cabezaVolteada = "../../../public/assets/imgs/cabeza-violeta.png";
+const live = "../../../public/assets/imgs/live.png";
+const comegalleta = "../../../public/assets/imgs/comegalleta.gif";
+const alien2 = "../../../public/assets/imgs/alien2.gif";
+const ayuda = "../../../public/assets/imgs/ayuda.gif";
+const misionEliptica = "../../../public/assets/imgs/mision-eliptica.png";
+const sonidoHq = "../../../public/assets/imgs/sonido-hq.jpg";
+---
+
+<Layout title="Home">
+  <section class="grid grid-cols-3 p-2 border-b-2 border-red-700">
+    <div class="flex p-2 justify-start">
+      <img src={planetMusic} alt="alien" width="60" height="50" />
+    </div>
+
+    <div class="flex p-2 justify-center">
+      <img src={ia} alt="alien" width="60" height="50" />
+    </div>
+    <div class="flex p-2 justify-end">
+      <img class="m-1" src={carritoCompra} alt="alien" width="60" height="50" />
+      <img src={co} alt="alien" width="60" height="50" />
+    </div>
+  </section>
+
+  <section class="grid grid-rows-1 grid-cols-6 grid-flow-row-dense">
+    <div class="col-span-1 flex items-center flex-col justify-between">
+      <div>
+        <img src={live} alt="" width="120" height="50" />
+      </div>
+      <div>
+        <img class="w-20" src={comegalleta} alt="" width="120" height="50" />
+      </div>
+      <div>
+        <img src={misionEliptica} alt="" width="120" height="50" />
+        <p class="text-white text-xs">The best sessions of the 2000's</p>
+      </div>
+      <div>
+        <img src={sonidoHq} alt="" width="180" height="50" />
+      </div>
+    </div>
+
+    <div class="col-span-4 flex justify-center items-center">
+      <img src={cabezaVolteada} alt="Imagen grande" />
+    </div>
+
+    <div class="col-span-1 flex items-center flex-col justify-between">
+      <div>
+        <img src={alien2} alt="" width="60" height="50" />
+      </div>
+      <div>
+        <p class="text-white text-xs">
+          No se realizaran pautas con criptomoneda
+        </p>
+      </div>
+      <div class="">
+        <img src={ayuda} alt="" width="60" height="50" />
+      </div>
+    </div>
+  </section>
+  <section class="m-3">
+    <article>
+      <p class="text-red-700 text-center">
+        Heavy Metal, Bachata, Merengue, Vallenato, Ranchera, Salsa, Cumbia,
+        Dembow, Baladas, Kpop, Música Popular, Trap, Banda, Champeta, Pop, Rock,
+        Hip Hop, Reggaetón, Electrónica, R&B, Música Clásica, Country, BSOs,
+        Reggae, Carranga, Mariachi, Tecno Carrilera, Salsa Choke, Tango, Bolero,
+        Música de Planchar, Disco, Funk..
+      </p>
+    </article>
+  </section>
+  <script></script>
+</Layout>
