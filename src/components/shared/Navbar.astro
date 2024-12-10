@@ -2,7 +2,8 @@
 import Search from "@/components/icons/Search.icon.astro";
 import User from "../icons/User.icon.astro";
 import NavBarLink from "../navBarLink/NavBarLink.astro";
-import Time from "../icons/Time.icon.astro";
+
+import { PublicRoutes } from "@/consts/routes";
 ---
 
 <style>
@@ -35,7 +36,7 @@ import Time from "../icons/Time.icon.astro";
 <!-- Navbar start -->
 <nav
   id="navbar"
-  class="fixed top-0 z-40 flex w-full flex-row xl:justify-start bg-black px-4 justify-between"
+  class="fixed top-0 z-40 flex w-full flex-row xl:justify-between bg-black px-4 justify-between"
 >
   <button
     id="btnSidebarToggler"
@@ -100,7 +101,8 @@ import Time from "../icons/Time.icon.astro";
         >
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
-          href="#"><span class="select-none">Informacion</span></NavBarLink
+          href=`/${PublicRoutes?.PUBLIC}/${PublicRoutes?.INFORMATION}`
+          ><span class="select-none">Informacion</span></NavBarLink
         >
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
