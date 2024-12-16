@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import login from "@/assets/imgs/login.png";
+import { PublicRoutes } from "@/consts/routes";
+---
+
+<Layout title="Login">
+  <section>
+    <article>
+      <Image src={login} alt="Imagen del login" />
+      <div class="flex justify-between p-3">
+        <p class="p-text-xs">Escucha musica de todo mundo</p>
+        <p class="p-text-xs">conectate con la comunidad</p>
+        <p class="p-text-xs">Obten descuentos con la publicidad al aire</p>
+      </div>
+      <div>
+        <form class="flex flex-col items-center" action="" method="post">
+          <input
+            type="email"
+            name="email"
+            class="bg-black text-white border border-white rounded-md p-2 w-4/6 mb-8"
+            placeholder="Ingrese su correo"
+          />
+          <input
+            type="password"
+            name="correo"
+            class="bg-black text-white border border-white rounded-md p-2 w-4/6 mb-8"
+            placeholder="Ingrese su contraseña"
+          />
+
+          <input
+            type="button"
+            value="Acceder"
+            class="text-white border border-white rounded-md p-2 w-1/5 cursor-pointer hover:bg-orange-500 transition duration-300 ease-in-out"
+          />
+        </form>
+        <p class="text-white p-2">
+          Acceda con su cuenta de Google. Al hacerlo, usted acepta los términos
+          y condiciones.
+        </p>
+
+        <a
+          href={`/${PublicRoutes?.PUBLIC}/${PublicRoutes?.TERM_AND_CONDITIONS}`}
+          class="flex justify-center text-orange-500">Terminos y condiciones.</a
+        >
+        <p class="text-center text-orange-500">¿Necesitas ayuda?</p>
+      </div>
+    </article>
+  </section>
+</Layout>

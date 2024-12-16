@@ -1,1 +1,1 @@
-export * from './Modal.astro'
+export * from "./Modal.tsx";

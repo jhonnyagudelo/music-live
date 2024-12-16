@@ -1,0 +1,88 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Heart from "@/components/icons/Heart.icon.astro";
+---
+
+<Layout title="Donar">
+  <section class="main-section">
+    <h3 class="text-white text-center">DONAR</h3>
+    <p class="text-white text-center">
+      Escucha música gratis, de alta calidad y sin anuncios.
+    </p>
+    <p class="text-white text-center">
+      Al hacer una donación única, obtendrás acceso a funciones especiales de
+      MSJ, también podrás ver el nombre de la pista y el artista en tu página de
+      inicio y elegir avatares personalizados. Tu contribución es crucial para
+      mantener el sitio, cubriendo gastos de mantenimiento y aplicaciones para
+      música de alta calidad. Las funciones se desbloquearán de inmediato y
+      estarán disponibles en cada acceso a la emisora. Agradecemos tu apoyo
+    </p>
+    <article class="flex justify-around">
+      <div
+        class="bg-white w-36 h-28 flex items-center justify-center rounded-xl flex-wrap cursor-pointer hover:bg-gray-200 hover:scale-105 transition duration-300 ease-in-ou clickableDivs"
+      >
+        <a
+          class="text-black hover:text-black"
+          href="#"
+          target="_blank"
+          rel="donacion">$ 2,000 COP</a
+        >
+      </div>
+      <div
+        class="bg-white w-36 h-28 flex items-center justify-center rounded-xl flex-wrap cursor-pointer hover:bg-gray-200 hover:scale-105 transition duration-300 ease-in-ou clickableDivs"
+      >
+        <a
+          class="text-black hover:text-black"
+          href="#"
+          target="_blank"
+          rel="donacion">$ 3,000 COP</a
+        >
+      </div>
+      <div
+        class="bg-white w-36 h-28 flex items-center justify-center rounded-xl flex-wrap cursor-pointer hover:bg-gray-200 hover:scale-105 transition duration-300 ease-in-ou clickableDivs"
+      >
+        <a
+          class="text-black hover:text-black"
+          href="#"
+          target="_blank"
+          rel="donacion">$ 5,000 COP</a
+        >
+      </div>
+    </article>
+    <article class="flex items-center flex-col">
+      <p class="text-white text-center p-2">
+        Formas de pago:
+        <span class="text-orange-500 font-bold">Mercado pago</span>
+        <span class="text-orange-500 font-bold">Nequi</span>
+        <span class="text-orange-500 font-bold">Payonner</span>
+      </p>
+      <p class="text-orange-500">
+        Si deseas contribuir con un monto distinto a las opciones mencionadas,
+        puedes hacerlo a través de Nequi al número 324 6864647. Si estás fuera
+        de Colombia, también puedes donar mediante Payoneer. Agradecemos tu
+        apoyo.
+      </p>
+      <button
+        class="bg-orange-500 text-black font-bold rounded-xl w-2/5 h-16 text-center flex flex-row items-center justify-center cursor-pointer hover:bg-orange-300 hover:scale-105 transition duration-300 ease-in-out"
+      >
+        Donar <Heart />
+      </button>
+      <p class="text-orange-500 text-xs p-4">
+        Agradecemos profundamente tu donación; es un valioso reconocimiento a
+        nuestro esfuerzo.
+      </p>
+    </article>
+  </section>
+</Layout>
+<script>
+  const clickableDivs = document.querySelectorAll(".clickable-div");
+
+  clickableDivs.forEach((div) => {
+    div.addEventListener("click", (event) => {
+      const link = div.querySelector("a");
+      if (link) {
+        window.open(link.href, "_blank", "noopener,noreferrer");
+      }
+    });
+  });
+</script>

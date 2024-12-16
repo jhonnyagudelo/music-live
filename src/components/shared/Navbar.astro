@@ -76,9 +76,12 @@ import { PublicRoutes } from "@/consts/routes";
   <div
     class="flex flex-row justify-center items-center py-4 text-lg text-white sm:flex"
   >
-    <h1 class="text-white font-bold text-2xl">
+    <a
+      href="/"
+      class="text-white font-bold text-2xl hover:text-white select-none"
+    >
       Music <span class="bg-yellow-500 text-black">hub</span>
-    </h1>
+    </a>
   </div>
   <div class="flex flex-row items-center text-2xl">
     <Search width="1.5em" className="text-white cursor-pointer" />
@@ -106,7 +109,7 @@ import { PublicRoutes } from "@/consts/routes";
         >
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
-          href="#"
+          href=`/${PublicRoutes?.PUBLIC}/${PublicRoutes?.TRANSMISSION}`
           ><span class="select-none">Transmitimos desde</span></NavBarLink
         >
         <NavBarLink
@@ -132,7 +135,8 @@ import { PublicRoutes } from "@/consts/routes";
         >
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
-          href="#"><span class="select-none">Donar</span></NavBarLink
+          href=`/${PublicRoutes?.PUBLIC}/${PublicRoutes?.DONATE}`
+          ><span class="select-none">Donar</span></NavBarLink
         >
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
@@ -146,7 +150,7 @@ import { PublicRoutes } from "@/consts/routes";
 
         <NavBarLink
           class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600 hover:text-white"
-          href="#"
+          href=`/${PublicRoutes?.PUBLIC}/${PublicRoutes?.SATISFACTORY}`
           ><span class="select-none">Te grada nuestro sitio web?</span
           ></NavBarLink
         >

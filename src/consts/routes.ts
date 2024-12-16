@@ -3,6 +3,10 @@ export const PublicRoutes: AstroRoute = {
   PUBLIC: "public",
   REGISTER: "register",
   INFORMATION: "information",
+  TERM_AND_CONDITIONS: "termAndConditions",
+  SATISFACTORY: "satisfactory",
+  TRANSMISSION: "transmission",
+  DONATE: "donate",
 };
 
 export const ProtectedRoutes: AstroRoute = {

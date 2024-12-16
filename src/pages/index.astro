@@ -1,58 +1,69 @@
 ---
-import Modal from "@/components/modal/Modal.astro";
 import Layout from "../layouts/Layout.astro";
-const planetMusic = "../../../public/assets/imgs/planetMusic.png";
-const ia = "../../../public/assets/imgs/ia.gif";
-const carritoCompra = "../../../public/assets/imgs/carrito-compra.gif";
-const co = "../../../public/assets/imgs/co.gif";
-const cabezaVolteada = "../../../public/assets/imgs/cabeza-violeta.png";
-const live = "../../../public/assets/imgs/live.png";
-const comegalleta = "../../../public/assets/imgs/comegalleta.gif";
-const alien2 = "../../../public/assets/imgs/alien2.gif";
-const ayuda = "../../../public/assets/imgs/ayuda.gif";
-const misionEliptica = "../../../public/assets/imgs/mision-eliptica.png";
-const sonidoHq = "../../../public/assets/imgs/sonido-hq.jpg";
+import { Image } from "astro:assets";
+import planetMusic from "@/assets/imgs/planetMusic.png";
+import ia from "@/assets/imgs/ia.gif";
+import carritoCompra from "@/assets/imgs/carrito-compra.gif";
+import co from "@/assets/imgs/co.gif";
+import cabezaVolteada from "@/assets/imgs/cabeza-violeta.png";
+import live from "@/assets/imgs/live.png";
+import comegalleta from "@/assets/imgs/comegalleta.gif";
+import alien2 from "@/assets/imgs/alien2.gif";
+import ayuda from "@/assets/imgs/ayuda.gif";
+import misionEliptica from "@/assets/imgs/mision-eliptica.png";
+import sonidoHq from "@/assets/imgs/sonido-hq.jpg";
 ---
 
 <Layout title="Home">
   <section class="grid grid-cols-3 p-2 border-b-2 border-red-700">
     <div class="flex p-2 justify-start">
-      <img src={planetMusic} alt="alien" width="60" height="50" />
+      <Image src={planetMusic} alt="alien" width="60" height="50" />
     </div>
 
     <div class="flex p-2 justify-center">
-      <img src={ia} alt="alien" width="60" height="50" />
+      <Image src={ia} alt="alien" width="60" height="50" />
     </div>
     <div class="flex p-2 justify-end">
-      <img class="m-1" src={carritoCompra} alt="alien" width="60" height="50" />
-      <img src={co} alt="alien" width="60" height="50" />
+      <Image
+        class="m-1"
+        src={carritoCompra}
+        alt="alien"
+        width="60"
+        height="50"
+      />
+      <Image src={co} alt="alien" width="60" height="50" />
     </div>
   </section>
 
   <section class="grid grid-rows-1 grid-cols-6 grid-flow-row-dense">
     <div class="col-span-1 flex items-center flex-col justify-between">
       <div>
-        <img src={live} alt="" width="120" height="50" />
+        <Image src={live} alt="live" width="120" height="50" />
       </div>
       <div>
-        <img class="w-20" src={comegalleta} alt="" width="120" height="50" />
+        <Image class="w-20" src={comegalleta} alt="" width="120" height="50" />
       </div>
       <div>
-        <img src={misionEliptica} alt="" width="120" height="50" />
+        <Image
+          src={misionEliptica}
+          alt="mision eliptica"
+          width="120"
+          height="50"
+        />
         <p class="text-white text-xs">The best sessions of the 2000's</p>
       </div>
       <div>
-        <img src={sonidoHq} alt="" width="180" height="50" />
+        <Image src={sonidoHq} alt="" width="180" height="50" />
       </div>
     </div>
 
     <div class="col-span-4 flex justify-center items-center">
-      <img src={cabezaVolteada} alt="Imagen grande" />
+      <Image src={cabezaVolteada} alt="Imagen grande" />
     </div>
 
     <div class="col-span-1 flex items-center flex-col justify-between">
       <div>
-        <img src={alien2} alt="" width="60" height="50" />
+        <img src={`${alien2}`} alt="alien2" width="180" height="50" />
       </div>
       <div>
         <p class="text-white text-xs">
@@ -60,7 +71,7 @@ const sonidoHq = "../../../public/assets/imgs/sonido-hq.jpg";
         </p>
       </div>
       <div class="">
-        <img src={ayuda} alt="" width="60" height="50" />
+        <Image src={ayuda} alt="ayuda" width="60" height="50" />
       </div>
     </div>
   </section>
@@ -75,5 +86,7 @@ const sonidoHq = "../../../public/assets/imgs/sonido-hq.jpg";
       </p>
     </article>
   </section>
-  <script></script>
+  <section class="grid grid-rows-1 grid-cols-3 grid-flow-row-dense">
+    <div></div>
+  </section>
 </Layout>

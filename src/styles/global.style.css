@@ -147,3 +147,15 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+
+.p-text {
+  @apply text-white text-2xl;
+}
+
+.p-text-xs {
+  @apply text-white text-xs;
+}
+
+.main-section {
+  @apply m-auto mt-8;
+}
